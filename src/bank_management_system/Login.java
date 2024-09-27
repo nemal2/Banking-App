@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 
 public class Login  extends JFrame implements ActionListener {
 
-    // // globally defined to access even out of constructor
+    // // //globally defined to access even out of constructor
     JButton login, clear, signup;
     JTextField card;
     JPasswordField pincode;
