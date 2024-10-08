@@ -16,7 +16,7 @@ public class SignupOne extends JFrame implements ActionListener {
     SignupOne(){
 
         setLayout(null);
-        setTitle("SIGN UP");
+        setTitle("Create Account Form - Page 1");
 
         Random ran = new Random();
         random = Math.abs(ran.nextLong() % 9000L) + 1000L;
@@ -231,6 +231,7 @@ public class SignupOne extends JFrame implements ActionListener {
                 String query = "insert into signup values('"+formno+"','"+name+"','"+fname+"','"+dob+"','"+gender+"','"+email+"','"+marital+"','"+address+"','"+city+"','"+state+"','"+pincode+"')";
                 c.s.executeUpdate(query); // execute query using statement
                 setVisible(false);
+                new SignupTwo(formno).setVisible(true);
             }
 
 
