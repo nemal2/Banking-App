@@ -59,6 +59,8 @@ public class Transaction extends JFrame implements ActionListener {
         balanceEnquiry.addActionListener(this);
         label.add(balanceEnquiry);
 
+
+
         exit = new JButton("EXIT");
         exit.setBounds(360, 465, 120, 20);
         exit.addActionListener(this);
@@ -93,6 +95,11 @@ public class Transaction extends JFrame implements ActionListener {
         else if (ae.getSource() == fastCash) {
             setVisible(false);
             new FastCash(pinnumber).setVisible(true);
+        }
+
+        else if (ae.getSource() == pinChange) {
+            setVisible(false);
+            new PinChange(pinnumber).setVisible(true);
         }
 
 
